@@ -23,11 +23,7 @@ repositories {
 }
 
 kotlin {
-	jvm().compilations.all {
-		kotlinOptions {
-			jvmTarget = "$jvmTarget"
-		}
-	}
+	jvm()
 	js() {
 		nodejs()
 		browser()
@@ -38,15 +34,8 @@ kotlin {
 	wasm32()
 
 	sourceSets {
-		all {
-			languageSettings.useExperimentalAnnotation("kotlin.RequiresOptIn")
-		}
-
 		jvmMain {
 			dependsOn(commonMain)
-
-			dependencies {
-			}
 		}
 	}
 }
