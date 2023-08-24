@@ -31,7 +31,6 @@ kotlin {
 	linuxX64()
 	macosX64()
 	mingwX64()
-	wasm32()
 
 	sourceSets {
 		jvmMain {
